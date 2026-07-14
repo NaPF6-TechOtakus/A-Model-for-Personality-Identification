@@ -43,15 +43,15 @@ URL:<https://huggingface.co/google-bert/bert-base-uncased/tree/main>
 
 `python bert.py`
 
-![结果](images\1.png)
+![](images\1.png)
 
 `python bert1.py`
 
-![结果](images/2.png)
+![](images/2.png)
 
 加入中立句
 
-![结果](images\3.png)
+![](images\3.png)
 
 发现维度 432：中立句的值介于 love 和 hate 之间，但不是 love 和 hate 的平均值，说明情感维度不是某个单一维度的线性表示
 

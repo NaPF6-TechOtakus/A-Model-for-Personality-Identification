@@ -43,7 +43,7 @@ URL:<https://huggingface.co/google-bert/bert-base-uncased/tree/main>
 
 `python bert.py`
 
-![](images\1.png)
+![](images/1.png)
 
 `python bert1.py`
 
@@ -51,7 +51,7 @@ URL:<https://huggingface.co/google-bert/bert-base-uncased/tree/main>
 
 加入中立句
 
-![](images\3.png)
+![](images/3.png)
 
 发现维度 432：中立句的值介于 love 和 hate 之间，但不是 love 和 hate 的平均值，说明情感维度不是某个单一维度的线性表示
 
@@ -88,7 +88,7 @@ FC3:y3 = ReLU(W × y2 + b)
 
 ```
 
-![结果](images\4.png)
+![结果](images/4.png)
 怎么保证输出的五维人格向量是正确的？
 也即：怎么知道变换矩阵 W 是对的？
 
@@ -115,7 +115,7 @@ FC3:y3 = ReLU(W × y2 + b)
 
 `corpus.print_summary_stats()`
 
-![结果](images\5.png)
+![结果](images/5.png)
 
 可以看到：
 
@@ -133,7 +133,7 @@ print(speaker.id)
 print(speaker.meta)
 ```
 
-![](images\6.png)
+![](images/6.png)
 
 ### 训练模型
 
@@ -151,7 +151,7 @@ print(speaker.meta)
 python dppr_train.py
 ```
 
-![结果](images\dppr_train1.png)
+![结果](images/dppr_train1.png)
 
 由图中结果可知，均方损失为12.4405，偏大
 
@@ -159,10 +159,10 @@ python dppr_train.py
 
 第二次训练加入transformer encoder
 
-![](images\dppr_train2.png)
+![](images/dppr_train2.png)
 可以看到测试误差下降到0.7左右，但是出现了过拟合现象
 
 **t推测原因**：模型参数为8M，模型容量大，数据集仅1017条对话，数据少，出现过拟合
 
 **解决**：尝试early stopping 和 k-fold
-![](images\dppr_train3.png)
+![](images/dppr_train3.png)
